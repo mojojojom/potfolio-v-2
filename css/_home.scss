@@ -1,0 +1,347 @@
+.home
+{
+    // BANNER SECTION
+    &_banner
+    {
+        // WRAPPER
+        &-wrap
+        {
+            position: relative;
+            background: url('/assets/images/banner-bg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        // HEADING
+        &-heading
+        {
+            font-size: 80px;
+            font-weight: 900;
+            position: relative;
+            z-index: 2;
+            // -webkit-text-stroke: 1px $secondary-color;
+            // text-stroke: 1px $secondary-color;
+            &-wrap
+            {
+                text-align: center;
+            }
+        }
+
+        // BANNER FIRST SECTION
+        &-first
+        {
+            &-section
+            {
+                padding: 40px 0;
+                height: 480px;
+            }
+        }
+
+        // BANNER SECOND SECTION
+        &-second
+        {
+            &-row
+            {
+                padding: 40px 0;
+            }
+
+            &-section
+            {
+                background-color: $primary-color;
+            }
+
+            // LEFT COLUMN
+            &-left
+            {
+                &-col
+                {
+                    &-wrap
+                    {
+
+                    }
+                    &-txt
+                    {
+                        color: $secondary-color;
+                        font-size: 18px;
+                        margin-bottom: 0;
+                        &.heading
+                        {
+                            font-size: 80px;
+                            font-weight: 900;
+                            line-height: 1em;
+                        }
+                    }
+                }
+            }
+            
+            // CENTER COLUMN
+            &-center
+            {
+                &-col
+                {
+                    &-wrap
+                    {
+                        position: absolute;
+                        bottom: 40px;
+                    }
+                    &-img
+                    {
+                        height: 650px;
+                    }
+                }
+            }
+        }
+
+        // RIGHT COLUMN
+        &-right
+        {
+            &-col
+            {
+                // RIGHT COL HEADING
+                &-txt
+                {
+                    font-size: 20px;
+                    font-weight: 800;
+                }
+                // PROJECT WRAP
+                &-project
+                {
+                    &-wrap
+                    {
+                        transition: all ease-in-out 300ms;
+                        overflow: hidden;
+                        &:hover
+                        {
+
+                            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+                            .home_banner-right-col-project-img-overlay
+                            {
+                                opacity: 0;
+                            }
+                            .home_banner-right-col-project-cap
+                            {
+                                top: -50px;
+                            }
+                        }
+                    }
+                    &-img
+                    {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 150px;
+                        position: relative;
+                        &-wrap
+                        {
+                            position: relative;
+                        }
+                        &-overlay
+                        {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $primary-color;
+                            z-index: 1;
+                            transition: all 300ms ease-in-out;
+                        }
+                    }
+                    &-cap
+                    {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        padding: 20px;
+                        z-index: 2;
+                        transition: all 300ms ease-in-out;
+                        &-num
+                        {
+                            font-size: 14px;
+                            font-weight: 400;
+                            margin-bottom: 0;
+                            color: $secondary-color;
+                        }
+                        &-title
+                        {
+                            font-size: 16px;
+                            font-weight: 700;
+                            margin-bottom: 0;
+                            text-transform: uppercase;
+                            text-align: end;
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // ABOUT SECTION
+    &_about
+    {
+        // HEADING
+        &-heading
+        {
+            color: $primary-color;
+            font-size: 60px;
+            font-weight: 900;
+        }
+    }
+
+
+    // LATEST PROJECTS SECTION
+    &_projects
+    {
+        &-slider
+        {
+            &-item
+            {
+                height: 200px;
+                position: relative;
+                transition: all ease-in-out 300ms;
+                .inner-link
+                {
+                    color: $primary-color;
+                    position: relative;
+                }
+                img
+                {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: all ease-in-out 300ms;
+                }
+                &-heading
+                {
+                    color: $secondary-color;
+                    font-size: 20px;
+                    font-weight: 900;
+                    &-wrap
+                    {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        transition: all ease-in-out 300ms;
+                    }
+                }
+                &-overlay
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $primary-color;
+                    opacity: 0.5;
+                    transition: all ease-in-out 300ms;
+                }
+                &-hidden
+                {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all ease-in-out 300ms;
+                    z-index: 2;
+                    text-align: center;
+                    p
+                    {
+                        color: $secondary-color;
+                        font-weight: 800;
+                        margin-bottom: 0;
+                        transform: scale(0);
+                        transition: all ease-in-out 300ms;
+                    }
+                }
+                &:hover
+                {
+                    .home_projects-slider-item-overlay
+                    {
+                        opacity: 0.8;
+                    }
+                    .home_projects-slider-item-heading-wrap
+                    {
+                        top: -30px;
+                    }
+                    .home_projects-slider-item-hidden
+                    {
+                        p
+                        {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // CONTACT SECTION
+    &_contact
+    {
+        &-wrap
+        {
+            margin-bottom: 100px;
+            border-radius: 0 0 60px 60px;
+        }
+
+        // CONTACT INFO
+        &-info
+        {
+            &-icon
+            {
+                a
+                {
+                    color: $secondary-color;
+                    transition: all ease-in-out 300ms;
+                    &:hover
+                    {
+                        color: $secondary-hover-color;
+                    }
+                }
+                span
+                {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        // CONTACT LINKS
+        &-links
+        {
+            &-link
+            {
+                a
+                {
+                    color: $secondary-color;
+                    transition: all ease-in-out 300ms;
+                    &:hover
+                    {
+                        color: $secondary-hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// DIVIDER
+.contact-divider
+{
+    &::before
+    {
+        content: '';
+        display: flex;
+        width: 80px;
+        height: 2px;
+        background-color: $secondary-color;
+        margin: 10px 0;
+    }
+}

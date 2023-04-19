@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$primary-font : 'Unbounded', cursive;
+
+
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: $primary-font;
+    background-color: $secondary-color;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+ul
+{
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,a
+{
+    font-family: $primary-font;
+}
+
+
+// BUTTONS //
+.cbtn
+{
+    font-size: 14px;
+    padding: 15px 40px;
+    transition: all ease-in-out 300ms;
+    border-radius: 5px;
+    font-weight: 600;
+    &_primary
+    {
+        background-color: $primary-color;
+        color: $secondary-color;
+        &:hover
+        {
+            background-color: $primary-hover-color;
+            color: $secondary-color;
+        }
+    }
+    &_secondary
+    {
+        background-color: $secondary-color;
+        color: $primary-color;
+        &:hover
+        {
+            background-color: $secondary-hover-color;
+            color: $primary-color;
+        }
+    }
+}
+
+
+
+// SPACING
+.sec-padding
+{
+    padding: 100px 0;
+}
+
+
+// BACKROUNDS
+.p-bg
+{
+    background-color: $primary-color;
+}
+.s-bg
+{
+    background-color: $secondary-color;
+}
+
+
+// HEADING
+.site-heading
+{
+    font-size: 60px;
+    font-weight: 900;
+}
+.site-subheading
+{
+    font-size: 30px;
+    font-weight: 900;
+}
+.subtext
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+// FONT COLORS
+.p-txt
+{
+    color: $primary-color;
+}
+.s-txt
+{
+    color: $secondary-color;
+}
+.p-sub-txt
+{
+    color: $primary-subtext-color;
+}
+.s-sub-txt
+{
+    color: $secondary-subtext-color;
+}
+
+
+
+// FORM
+.cform-group
+{
+    display:grid;
+}
+.cform-label
+{
+    color: $secondary-color;
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.cform-input
+{
+    color: $primary-subtext-color;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    &:focus
+    {
+        border-color: $secondary-color; /* set border color */
+        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25); /* add box shadow */
+    }
+}
+.cform-important
+{
+    color: $danger-color;
+}
+.cform-subtxt
+{
+    color: $secondary-subtext-color;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 2px;
+}
